@@ -48,4 +48,4 @@ for plot in (ax1, ax2, ax3):
 
 plt.suptitle("Faithfulness, Coherence and Decision Quality by Model Overall", x=0.5, ha='center') 
 plt.tight_layout()
-plt.savefig("overall.png")
+plt.savefig("graph/overall.png")
