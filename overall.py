@@ -40,6 +40,10 @@ ax[1].set_title("Coherence")
 ax3 = ax[2].boxplot([df_cleaned_reasoning_dq["Decision Quality"], df_cleaned_non_reasoning_dq["Decision Quality"]], tick_labels=["Qwen", "Mistral"], patch_artist=True)
 ax[2].set_title("Decision Quality")
 
+ax[0].set_yticks([0,1,2,3,4,5])
+ax[1].set_yticks([0,1,2,3,4,5])
+ax[2].set_yticks([0,1,2,3,4,5])
+
 colours = ["purple", "orange"]
 
 for plot in (ax1, ax2, ax3):
