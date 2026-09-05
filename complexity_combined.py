@@ -17,7 +17,7 @@ non_reasoning = df.loc[df["Model"] == "Mistral"]
 
 
 
-fig, ax = plt.subplots(figsize=(6,18), ncols=1, nrows=3)
+fig, ax = plt.subplots(figsize=(6,16), ncols=1, nrows=3)
 
 df_cleaned_reasoning_faithfulness = reasoning.dropna(subset=['Faithfulness'])
 df_cleaned_non_reasoning_faithfulness = non_reasoning.dropna(subset=['Faithfulness'])
@@ -58,7 +58,6 @@ ax[0].tick_params(axis='x', labelrotation=90)
 ax[1].tick_params(axis='x', labelrotation=90)
 ax[2].tick_params(axis='x', labelrotation=90)
 
-
-plt.suptitle("Faithfulness, Coherence and Decision Quality by Model Overall", x=0.5, ha='center') 
+plt.suptitle("Faithfulness, Coherence and Decision Quality by Model Overall") 
 plt.tight_layout()
 plt.savefig("graph/complexity_combined.png")
