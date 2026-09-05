@@ -29,7 +29,6 @@ df_cleaned_non_reasoning_coherence = non_reasoning.dropna(subset=['Coherence'])
 df_cleaned_reasoning_dq = reasoning.dropna(subset=['Decision Quality'])
 df_cleaned_non_reasoning_dq = non_reasoning.dropna(subset=['Decision Quality'])
 
-
 labels = ["Q-0-S", "M-0-S", "Q-0-C", "M-0-C", "Q-C-S", "M-C-S", "Q-C-C", "M-C-C"]
 
 # Row one
