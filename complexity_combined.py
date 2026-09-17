@@ -58,6 +58,39 @@ ax[0].tick_params(axis='x', labelrotation=90)
 ax[1].tick_params(axis='x', labelrotation=90)
 ax[2].tick_params(axis='x', labelrotation=90)
 
+
+
+ax[0].text(
+    1, -0.2,                  
+    "(a)",        
+    transform=ax[0].transAxes,      
+    verticalalignment='bottom',   
+    horizontalalignment='right',  
+    fontsize=12,
+    color='Black'
+)
+
+ax[1].text(
+    1, -0.2,                  
+    "(b)",        
+    transform=ax[1].transAxes,      
+    verticalalignment='bottom',   
+    horizontalalignment='right',  
+    fontsize=12,
+    color='Black'
+)
+
+ax[2].text(
+    1, -0.2,                  
+    "(c)",        
+    transform=ax[2].transAxes,      
+    verticalalignment='bottom',   
+    horizontalalignment='right',  
+    fontsize=12,
+    color='Black'
+)
+
+
 plt.suptitle("Faithfulness, Coherence and Decision Quality by Model Overall") 
 plt.tight_layout()
 plt.savefig("graph/complexity_combined.png")

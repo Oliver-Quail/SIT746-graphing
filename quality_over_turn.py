@@ -19,7 +19,7 @@ df_cleaned_reasoning_dq = reasoning.dropna(subset=['Decision Quality'])
 df_cleaned_non_reasoning_dq = non_reasoning.dropna(subset=['Decision Quality'])
 
 
-fig, ax = plt.subplots(figsize=(12,6), ncols=2, nrows=4)
+fig, ax = plt.subplots(figsize=(12,18), ncols=2, nrows=4)
 
 labels = ["Turn 1", "Turn 2", "Turn 3", "Turn 4"]
 
@@ -55,6 +55,82 @@ ax[2,0].set_yticks([0,1,2,3,4,5])
 ax[2,1].set_yticks([0,1,2,3,4,5])
 ax[3,0].set_yticks([0,1,2,3,4,5])
 ax[3,1].set_yticks([0,1,2,3,4,5])
+
+
+ax[0,0].text(
+    1, -0.2,                  
+    "(a)",        
+    transform=ax[0,0].transAxes,      
+    verticalalignment='bottom',   
+    horizontalalignment='right',  
+    fontsize=12,
+    color='Black'
+)
+ax[0,1].text(
+    1, -0.2,                  
+    "(b)",        
+    transform=ax[0,1].transAxes,      
+    verticalalignment='bottom',   
+    horizontalalignment='right',  
+    fontsize=12,
+    color='Black'
+)
+ax[1,0].text(
+    1, -0.2,                  
+    "(c)",        
+    transform=ax[1,0].transAxes,      
+    verticalalignment='bottom',   
+    horizontalalignment='right',  
+    fontsize=12,
+    color='Black'
+)
+
+ax[1,1].text(
+    1, -0.2,                  
+    "(d)",        
+    transform=ax[1,1].transAxes,      
+    verticalalignment='bottom',   
+    horizontalalignment='right',  
+    fontsize=12,
+    color='Black'
+)
+ax[2,0].text(
+    1, -0.2,                  
+    "(e)",        
+    transform=ax[2,0].transAxes,      
+    verticalalignment='bottom',   
+    horizontalalignment='right',  
+    fontsize=12,
+    color='Black'
+)
+ax[2,1].text(
+    1, -0.2,                  
+    "(f)",        
+    transform=ax[2,1].transAxes,      
+    verticalalignment='bottom',   
+    horizontalalignment='right',  
+    fontsize=12,
+    color='Black'
+)
+
+ax[3,0].text(
+    1, -0.2,                  
+    "(g)",        
+    transform=ax[3,0].transAxes,      
+    verticalalignment='bottom',   
+    horizontalalignment='right',  
+    fontsize=12,
+    color='Black'
+)
+ax[3,1].text(
+    1, -0.2,                  
+    "(h)",        
+    transform=ax[3,1].transAxes,      
+    verticalalignment='bottom',   
+    horizontalalignment='right',  
+    fontsize=12,
+    color='Black'
+)
 
 
 qwen = ["purple", "purple", "purple", "purple"]

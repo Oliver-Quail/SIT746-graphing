@@ -19,7 +19,7 @@ non_reasoning = df.loc[df["Model"] == "Mistral"]
 
 
 
-fig, ax = plt.subplots(figsize=(12,6), ncols=3, nrows=1)
+fig, ax = plt.subplots(figsize=(6,18), ncols=1, nrows=3)
 
 df_cleaned_reasoning_faithfulness = reasoning.dropna(subset=['Faithfulness'])
 df_cleaned_non_reasoning_faithfulness = non_reasoning.dropna(subset=['Faithfulness'])
@@ -34,6 +34,8 @@ df_cleaned_non_reasoning_dq = non_reasoning.dropna(subset=['Decision Quality'])
 ax1 = ax[0].boxplot([df_cleaned_reasoning_faithfulness["Faithfulness"], df_cleaned_non_reasoning_faithfulness["Faithfulness"]], tick_labels=["Qwen", "Mistral"], patch_artist=True)
 ax[0].set_title("Faithfulness")
 
+ax[0].tick_params(axis="x", labelsize=64)
+
 ax2 = ax[1].boxplot([df_cleaned_reasoning_coherence["Coherence"], df_cleaned_non_reasoning_coherence["Coherence"]], tick_labels=["Qwen", "Mistral"], patch_artist=True)
 ax[1].set_title("Coherence")
 
@@ -43,6 +45,36 @@ ax[2].set_title("Decision Quality")
 ax[0].set_yticks([0,1,2,3,4,5])
 ax[1].set_yticks([0,1,2,3,4,5])
 ax[2].set_yticks([0,1,2,3,4,5])
+
+ax[0].text(
+    1, -0.2,                  
+    "(a)",        
+    transform=ax[0].transAxes,      
+    verticalalignment='bottom',   
+    horizontalalignment='right',  
+    fontsize=12,
+    color='Black'
+)
+
+ax[1].text(
+    1, -0.2,                  
+    "(b)",        
+    transform=ax[1].transAxes,      
+    verticalalignment='bottom',   
+    horizontalalignment='right',  
+    fontsize=12,
+    color='Black'
+)
+
+ax[2].text(
+    1, -0.2,                  
+    "(c)",        
+    transform=ax[2].transAxes,      
+    verticalalignment='bottom',   
+    horizontalalignment='right',  
+    fontsize=12,
+    color='Black'
+)
 
 colours = ["purple", "orange"]
 

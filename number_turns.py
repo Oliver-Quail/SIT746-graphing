@@ -54,6 +54,6 @@ ax.tick_params(axis='x', labelrotation=90)
 
 
 
-plt.suptitle("Total Turns, Coherence and Decision Quality by Model Overall", x=0.5, ha='center') 
+plt.suptitle("Total Turns by SLM, Scenario Complexity and Prompting Strategy", x=0.5, ha='center') 
 plt.tight_layout()
 plt.savefig("graph/number_of_turns.png")
