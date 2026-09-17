@@ -32,15 +32,22 @@ df_cleaned_non_reasoning_dq = non_reasoning.dropna(subset=['Decision Quality'])
 
 
 ax1 = ax[0].boxplot([df_cleaned_reasoning_faithfulness["Faithfulness"], df_cleaned_non_reasoning_faithfulness["Faithfulness"]], tick_labels=["Qwen", "Mistral"], patch_artist=True)
-ax[0].set_title("Faithfulness")
+ax[0].set_title("Faithfulness", fontsize=16)
 
-ax[0].tick_params(axis="x", labelsize=64)
+ax[0].tick_params(axis="x", labelsize=16)
+ax[0].tick_params(axis="y", labelsize=16)
 
 ax2 = ax[1].boxplot([df_cleaned_reasoning_coherence["Coherence"], df_cleaned_non_reasoning_coherence["Coherence"]], tick_labels=["Qwen", "Mistral"], patch_artist=True)
-ax[1].set_title("Coherence")
+ax[1].set_title("Coherence", fontsize=16)
+
+ax[1].tick_params(axis="x", labelsize=16)
+ax[1].tick_params(axis="y", labelsize=16)
 
 ax3 = ax[2].boxplot([df_cleaned_reasoning_dq["Decision Quality"], df_cleaned_non_reasoning_dq["Decision Quality"]], tick_labels=["Qwen", "Mistral"], patch_artist=True)
-ax[2].set_title("Decision Quality")
+ax[2].set_title("Decision Quality", fontsize=16)
+
+ax[2].tick_params(axis="x", labelsize=16)
+ax[2].tick_params(axis="y", labelsize=16)
 
 ax[0].set_yticks([0,1,2,3,4,5])
 ax[1].set_yticks([0,1,2,3,4,5])
@@ -52,7 +59,7 @@ ax[0].text(
     transform=ax[0].transAxes,      
     verticalalignment='bottom',   
     horizontalalignment='right',  
-    fontsize=12,
+    fontsize=16,
     color='Black'
 )
 
@@ -62,7 +69,7 @@ ax[1].text(
     transform=ax[1].transAxes,      
     verticalalignment='bottom',   
     horizontalalignment='right',  
-    fontsize=12,
+    fontsize=16,
     color='Black'
 )
 
@@ -72,7 +79,7 @@ ax[2].text(
     transform=ax[2].transAxes,      
     verticalalignment='bottom',   
     horizontalalignment='right',  
-    fontsize=12,
+    fontsize=16,
     color='Black'
 )
 
