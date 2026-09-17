@@ -37,14 +37,14 @@ ax6 = ax[2,1].boxplot([df_cleaned_non_reasoning_dq.loc[(df_cleaned_non_reasoning
 ax7 = ax[3,0].boxplot([df_cleaned_non_reasoning_dq.loc[(df_cleaned_non_reasoning_dq["Scenario"] == "Simple") & (df_cleaned_non_reasoning_dq["Strategy"] == "Context") & (df_cleaned_non_reasoning_dq["Turn"] == 1)]["Decision Quality"], df_cleaned_non_reasoning_dq.loc[(df_cleaned_non_reasoning_dq["Scenario"] == "Simple") & (df_cleaned_non_reasoning_dq["Strategy"] == "Context") & (df_cleaned_non_reasoning_dq["Turn"] == 2)]["Decision Quality"], df_cleaned_non_reasoning_dq.loc[(df_cleaned_non_reasoning_dq["Scenario"] == "Simple") & (df_cleaned_non_reasoning_dq["Strategy"] == "Context") & (df_cleaned_non_reasoning_dq["Turn"] == 3)]["Decision Quality"], df_cleaned_non_reasoning_dq.loc[(df_cleaned_non_reasoning_dq["Scenario"] == "Simple") & (df_cleaned_non_reasoning_dq["Strategy"] == "Context") & (df_cleaned_non_reasoning_dq["Turn"] == 4)]["Decision Quality"]], tick_labels=labels, patch_artist=True)
 ax8 = ax[3,1].boxplot([df_cleaned_non_reasoning_dq.loc[(df_cleaned_non_reasoning_dq["Scenario"] == "Complex") & (df_cleaned_non_reasoning_dq["Strategy"] == "Context") & (df_cleaned_non_reasoning_dq["Turn"] == 1)]["Decision Quality"], df_cleaned_non_reasoning_dq.loc[(df_cleaned_non_reasoning_dq["Scenario"] == "Complex") & (df_cleaned_non_reasoning_dq["Strategy"] == "Context") & (df_cleaned_non_reasoning_dq["Turn"] == 2)]["Decision Quality"], df_cleaned_non_reasoning_dq.loc[(df_cleaned_non_reasoning_dq["Scenario"] == "Complex") & (df_cleaned_non_reasoning_dq["Strategy"] == "Context") & (df_cleaned_non_reasoning_dq["Turn"] == 3)]["Decision Quality"], df_cleaned_non_reasoning_dq.loc[(df_cleaned_non_reasoning_dq["Scenario"] == "Complex") & (df_cleaned_non_reasoning_dq["Strategy"] == "Context") & (df_cleaned_non_reasoning_dq["Turn"] == 4)]["Decision Quality"]], tick_labels=labels, patch_artist=True)
 
-ax[0,0].set_title("Q-0-S")
-ax[0,1].set_title("Q-0-C")
-ax[1,0].set_title("Q-C-S")
-ax[1,1].set_title("Q-C-C")
-ax[2,0].set_title("M-0-S")
-ax[2,1].set_title("M-0-C")
-ax[3,0].set_title("M-C-S")
-ax[3,1].set_title("M-C-C")
+ax[0,0].set_title("Q-0-S", fontsize=16)
+ax[0,1].set_title("Q-0-C", fontsize=16)
+ax[1,0].set_title("Q-C-S", fontsize=16)
+ax[1,1].set_title("Q-C-C", fontsize=16)
+ax[2,0].set_title("M-0-S", fontsize=16)
+ax[2,1].set_title("M-0-C", fontsize=16)
+ax[3,0].set_title("M-C-S", fontsize=16)
+ax[3,1].set_title("M-C-C", fontsize=16)
 
 
 ax[0,0].set_yticks([0,1,2,3,4,5])
@@ -63,7 +63,7 @@ ax[0,0].text(
     transform=ax[0,0].transAxes,      
     verticalalignment='bottom',   
     horizontalalignment='right',  
-    fontsize=12,
+    fontsize=16,
     color='Black'
 )
 ax[0,1].text(
@@ -72,7 +72,7 @@ ax[0,1].text(
     transform=ax[0,1].transAxes,      
     verticalalignment='bottom',   
     horizontalalignment='right',  
-    fontsize=12,
+    fontsize=16,
     color='Black'
 )
 ax[1,0].text(
@@ -81,7 +81,7 @@ ax[1,0].text(
     transform=ax[1,0].transAxes,      
     verticalalignment='bottom',   
     horizontalalignment='right',  
-    fontsize=12,
+    fontsize=16,
     color='Black'
 )
 
@@ -91,7 +91,7 @@ ax[1,1].text(
     transform=ax[1,1].transAxes,      
     verticalalignment='bottom',   
     horizontalalignment='right',  
-    fontsize=12,
+    fontsize=16,
     color='Black'
 )
 ax[2,0].text(
@@ -100,7 +100,7 @@ ax[2,0].text(
     transform=ax[2,0].transAxes,      
     verticalalignment='bottom',   
     horizontalalignment='right',  
-    fontsize=12,
+    fontsize=16,
     color='Black'
 )
 ax[2,1].text(
@@ -109,7 +109,7 @@ ax[2,1].text(
     transform=ax[2,1].transAxes,      
     verticalalignment='bottom',   
     horizontalalignment='right',  
-    fontsize=12,
+    fontsize=16,
     color='Black'
 )
 
@@ -119,7 +119,7 @@ ax[3,0].text(
     transform=ax[3,0].transAxes,      
     verticalalignment='bottom',   
     horizontalalignment='right',  
-    fontsize=12,
+    fontsize=16,
     color='Black'
 )
 ax[3,1].text(
@@ -128,10 +128,18 @@ ax[3,1].text(
     transform=ax[3,1].transAxes,      
     verticalalignment='bottom',   
     horizontalalignment='right',  
-    fontsize=12,
+    fontsize=16,
     color='Black'
 )
 
+ax[0,0].tick_params(axis="x", labelsize=16)
+ax[0,0].tick_params(axis="y", labelsize=16)
+ax[1,0].tick_params(axis="x", labelsize=16)
+ax[1,1].tick_params(axis="y", labelsize=16)
+ax[2,0].tick_params(axis="x", labelsize=16)
+ax[2,0].tick_params(axis="y", labelsize=16)
+ax[3,0].tick_params(axis="x", labelsize=16)
+ax[3,1].tick_params(axis="y", labelsize=16)
 
 qwen = ["purple", "purple", "purple", "purple"]
 mistral = ["orange", "orange", "orange", "orange"]
