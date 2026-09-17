@@ -36,9 +36,9 @@ labels = ["Q-0-S", "M-0-S", "Q-0-C", "M-0-C", "Q-C-S", "M-C-S", "Q-C-C", "M-C-C"
 
 # Row one
 ax1 = ax.boxplot([turn_count_reasoning.loc[(turn_count_reasoning["Scenario"] == "Simple") & (turn_count_reasoning["Strategy"] == "Zero")]["Total Turns"], turn_count_non_reasoning.loc[(turn_count_non_reasoning["Scenario"] == "Simple") & (turn_count_non_reasoning["Strategy"] == "Zero")]["Total Turns"], turn_count_reasoning.loc[(turn_count_reasoning["Scenario"] == "Complex") & (turn_count_reasoning["Strategy"] == "Zero")]["Total Turns"], turn_count_non_reasoning.loc[(turn_count_non_reasoning["Scenario"] == "Complex") & (turn_count_non_reasoning["Strategy"] == "Zero")]["Total Turns"], turn_count_reasoning.loc[(turn_count_reasoning["Scenario"] == "Simple") & (turn_count_reasoning["Strategy"] == "Context")]["Total Turns"], turn_count_non_reasoning.loc[(turn_count_non_reasoning["Scenario"] == "Simple") & (turn_count_non_reasoning["Strategy"] == "Context")]["Total Turns"], turn_count_reasoning.loc[(turn_count_reasoning["Scenario"] == "Complex") & (turn_count_reasoning["Strategy"] == "Context")]["Total Turns"], turn_count_non_reasoning.loc[(turn_count_non_reasoning["Scenario"] == "Complex") & (turn_count_non_reasoning["Strategy"] == "Context")]["Total Turns"] ], tick_labels=labels, patch_artist=True)
-ax.set_title("Faithfulness")
 
-
+ax.tick_params(axis="x", labelsize=16)
+ax.tick_params(axis="y", labelsize=16)
 
 colours = ["purple", "orange", "purple", "orange", "purple", "orange", "purple", "orange"]
 
